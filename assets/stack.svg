@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="stk-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B10" />
+      <stop offset="50%" stop-color="#111720" />
+      <stop offset="100%" stop-color="#080B10" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="stk-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00FFC6" />
+    </linearGradient>
+
+    <linearGradient id="stk-violet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#FF3CAC" />
+    </linearGradient>
+
+    <!-- Orbit Radial Glow -->
+    <radialGradient id="stk-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#080B10" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="stk-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#00E5FF" fill-opacity="0.1" />
+    </pattern>
+
+    <style>
+      .stk-font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      }
+      .stk-font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      @keyframes stk-spin-cw {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes stk-spin-ccw {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+      @keyframes stk-pulse-node {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #00E5FF); }
+        50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #00E5FF); }
+      }
+
+      .spin-slow-cw {
+        transform-origin: 210px 190px;
+        animation: stk-spin-cw 32s linear infinite;
+      }
+      .spin-mid-ccw {
+        transform-origin: 210px 190px;
+        animation: stk-spin-ccw 24s linear infinite;
+      }
+      .spin-fast-cw {
+        transform-origin: 210px 190px;
+        animation: stk-spin-cw 16s linear infinite;
+      }
+      .node-pulse {
+        animation: stk-pulse-node 4s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .spin-slow-cw, .spin-mid-ccw, .spin-fast-cw, .node-pulse {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Surface Base -->
+  <rect width="900" height="360" rx="12" fill="url(#stk-bg)" stroke="#18212B" stroke-width="1.5" />
+  <rect width="900" height="360" rx="12" fill="url(#stk-grid)" />
+
+  <!-- Section Header Row -->
+  <g transform="translate(35, 30)">
+    <text x="0" y="0" class="stk-font-mono" font-size="11" font-weight="700" fill="#00E5FF" letter-spacing="1.5">
+      // 02 VERIFIED TECHNICAL MATRIX
+    </text>
+    <text x="270" y="0" class="stk-font-mono" font-size="11" fill="#9AA8B7" opacity="0.6">
+      [DISCIPLINES // STACK &amp; TOOLING]
+    </text>
+    <circle cx="820" cy="-4" r="3" fill="#00FFC6" />
+    <text x="810" y="0" class="stk-font-mono" font-size="10" fill="#00FFC6" text-anchor="end">SYS::ACTIVE_STACK</text>
+    <line x1="0" y1="12" x2="830" y2="12" stroke="#18212B" stroke-width="1" />
+  </g>
+
+  <!-- LEFT: Tilted Orbital Schematics -->
+  <g transform="translate(0, 0)">
+    <!-- Central Glow Core -->
+    <circle cx="210" cy="190" r="130" fill="url(#stk-core-glow)" />
+
+    <!-- Center Hub: Developer Core -->
+    <g transform="translate(210, 190)">
+      <circle cx="0" cy="0" r="26" fill="#111720" stroke="#00E5FF" stroke-width="1.5" />
+      <polygon points="0,-14 12,7 -12,7" fill="none" stroke="#00FFC6" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="4" fill="#00E5FF" class="node-pulse" />
+      <text x="0" y="38" class="stk-font-mono" font-size="9" fill="#00E5FF" text-anchor="middle" font-weight="700">RD::CORE</text>
+    </g>
+
+    <!-- Outer Orbit Ring (Tilted Ellipse) -->
+    <g class="spin-slow-cw">
+      <ellipse cx="210" cy="190" rx="145" ry="85" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 6" transform="rotate(-25 210 190)" />
+      <!-- Node: TypeScript -->
+      <g transform="translate(340, 150)">
+        <circle cx="0" cy="0" r="13" fill="#111720" stroke="#00E5FF" stroke-width="1.2" />
+        <text x="0" y="4" class="stk-font-mono" font-size="9.5" font-weight="700" fill="#00E5FF" text-anchor="middle">TS</text>
+      </g>
+      <!-- Node: Python -->
+      <g transform="translate(80, 230)">
+        <circle cx="0" cy="0" r="13" fill="#111720" stroke="#00FFC6" stroke-width="1.2" />
+        <text x="0" y="4" class="stk-font-mono" font-size="9.5" font-weight="700" fill="#00FFC6" text-anchor="middle">PY</text>
+      </g>
+    </g>
+
+    <!-- Middle Orbit Ring -->
+    <g class="spin-mid-ccw">
+      <ellipse cx="210" cy="190" rx="105" ry="60" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 4" transform="rotate(35 210 190)" />
+      <!-- Node: React -->
+      <g transform="translate(290, 215)">
+        <circle cx="0" cy="0" r="12" fill="#111720" stroke="#8B5CF6" stroke-width="1.2" />
+        <text x="0" y="3.5" class="stk-font-mono" font-size="9" font-weight="700" fill="#8B5CF6" text-anchor="middle">RC</text>
+      </g>
+      <!-- Node: Linux -->
+      <g transform="translate(130, 165)">
+        <circle cx="0" cy="0" r="12" fill="#111720" stroke="#00E5FF" stroke-width="1.2" />
+        <text x="0" y="3.5" class="stk-font-mono" font-size="8.5" font-weight="700" fill="#00E5FF" text-anchor="middle">LX</text>
+      </g>
+    </g>
+
+    <!-- Inner Orbit Ring -->
+    <g class="spin-fast-cw">
+      <ellipse cx="210" cy="190" rx="65" ry="40" fill="none" stroke="#00FFC6" stroke-width="0.8" stroke-opacity="0.35" transform="rotate(-10 210 190)" />
+      <!-- Node: Next.js -->
+      <g transform="translate(265, 175)">
+        <circle cx="0" cy="0" r="9" fill="#111720" stroke="#00FFC6" stroke-width="1" />
+        <text x="0" y="3" class="stk-font-mono" font-size="7.5" font-weight="700" fill="#00FFC6" text-anchor="middle">NX</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT: Verified Grouped Stack Chips -->
+  <g transform="translate(420, 60)">
+    <!-- Category 1: Active Production Frontend -->
+    <g transform="translate(0, 0)">
+      <rect width="445" height="58" rx="6" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="3" height="58" rx="1.5" fill="#00E5FF" />
+      <text x="14" y="20" class="stk-font-mono" font-size="10" font-weight="700" fill="#00E5FF" letter-spacing="1">
+        CATEGORY 01 // ACTIVE WEB DEVELOPMENT
+      </text>
+      <!-- Chips -->
+      <g transform="translate(14, 28)" class="stk-font-mono" font-size="10">
+        <rect x="0" y="0" width="60" height="20" rx="3" fill="#18212B" /><text x="30" y="14" fill="#F3F7FA" text-anchor="middle">React 19</text>
+        <rect x="68" y="0" width="80" height="20" rx="3" fill="#18212B" /><text x="108" y="14" fill="#F3F7FA" text-anchor="middle">TypeScript</text>
+        <rect x="156" y="0" width="60" height="20" rx="3" fill="#18212B" /><text x="186" y="14" fill="#F3F7FA" text-anchor="middle">Next.js</text>
+        <rect x="224" y="0" width="46" height="20" rx="3" fill="#18212B" /><text x="247" y="14" fill="#F3F7FA" text-anchor="middle">Vite</text>
+        <rect x="278" y="0" width="85" height="20" rx="3" fill="#18212B" /><text x="320" y="14" fill="#F3F7FA" text-anchor="middle">Tailwind CSS</text>
+        <rect x="371" y="0" width="50" height="20" rx="3" fill="#18212B" /><text x="396" y="14" fill="#9AA8B7" text-anchor="middle">HTML/CSS</text>
+      </g>
+    </g>
+
+    <!-- Category 2: Backend & Data Management -->
+    <g transform="translate(0, 68)">
+      <rect width="445" height="58" rx="6" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="3" height="58" rx="1.5" fill="#00FFC6" />
+      <text x="14" y="20" class="stk-font-mono" font-size="10" font-weight="700" fill="#00FFC6" letter-spacing="1">
+        CATEGORY 02 // BACKEND, DATA &amp; STORAGE
+      </text>
+      <!-- Chips -->
+      <g transform="translate(14, 28)" class="stk-font-mono" font-size="10">
+        <rect x="0" y="0" width="56" height="20" rx="3" fill="#18212B" /><text x="28" y="14" fill="#F3F7FA" text-anchor="middle">Python</text>
+        <rect x="64" y="0" width="48" height="20" rx="3" fill="#18212B" /><text x="88" y="14" fill="#F3F7FA" text-anchor="middle">Flask</text>
+        <rect x="120" y="0" width="105" height="20" rx="3" fill="#18212B" /><text x="172" y="14" fill="#F3F7FA" text-anchor="middle">Postgres (Neon)</text>
+        <rect x="233" y="0" width="54" height="20" rx="3" fill="#18212B" /><text x="260" y="14" fill="#F3F7FA" text-anchor="middle">MySQL</text>
+        <rect x="295" y="0" width="76" height="20" rx="3" fill="#18212B" /><text x="333" y="14" fill="#F3F7FA" text-anchor="middle">IndexedDB</text>
+        <rect x="379" y="0" width="46" height="20" rx="3" fill="#18212B" /><text x="402" y="14" fill="#9AA8B7" text-anchor="middle">REST API</text>
+      </g>
+    </g>
+
+    <!-- Category 3: Security & Networking Labs -->
+    <g transform="translate(0, 136)">
+      <rect width="445" height="58" rx="6" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="3" height="58" rx="1.5" fill="#8B5CF6" />
+      <text x="14" y="20" class="stk-font-mono" font-size="10" font-weight="700" fill="#8B5CF6" letter-spacing="1">
+        CATEGORY 03 // CYBERSECURITY &amp; SYSTEM LABS
+      </text>
+      <!-- Chips -->
+      <g transform="translate(14, 28)" class="stk-font-mono" font-size="10">
+        <rect x="0" y="0" width="75" height="20" rx="3" fill="#18212B" /><text x="37" y="14" fill="#F3F7FA" text-anchor="middle">Kali Linux</text>
+        <rect x="83" y="0" width="72" height="20" rx="3" fill="#18212B" /><text x="119" y="14" fill="#F3F7FA" text-anchor="middle">Wireshark</text>
+        <rect x="163" y="0" width="112" height="20" rx="3" fill="#18212B" /><text x="219" y="14" fill="#F3F7FA" text-anchor="middle">AES-256 / Crypto</text>
+        <rect x="283" y="0" width="98" height="20" rx="3" fill="#18212B" /><text x="332" y="14" fill="#F3F7FA" text-anchor="middle">Network Security</text>
+        <rect x="389" y="0" width="44" height="20" rx="3" fill="#18212B" /><text x="411" y="14" fill="#9AA8B7" text-anchor="middle">OSINT</text>
+      </g>
+    </g>
+
+    <!-- Category 4: Hardware & Prototyping Workflows -->
+    <g transform="translate(0, 204)">
+      <rect width="445" height="58" rx="6" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="3" height="58" rx="1.5" fill="#FF3CAC" />
+      <text x="14" y="20" class="stk-font-mono" font-size="10" font-weight="700" fill="#FF3CAC" letter-spacing="1">
+        CATEGORY 04 // HARDWARE &amp; AI-ASSISTED PROTOTYPING
+      </text>
+      <!-- Chips -->
+      <g transform="translate(14, 28)" class="stk-font-mono" font-size="10">
+        <rect x="0" y="0" width="130" height="20" rx="3" fill="#18212B" /><text x="65" y="14" fill="#F3F7FA" text-anchor="middle">Raspberry Pi Zero W</text>
+        <rect x="138" y="0" width="94" height="20" rx="3" fill="#18212B" /><text x="185" y="14" fill="#F3F7FA" text-anchor="middle">Antigravity AI</text>
+        <rect x="240" y="0" width="68" height="20" rx="3" fill="#18212B" /><text x="274" y="14" fill="#F3F7FA" text-anchor="middle">ChatGPT</text>
+        <rect x="316" y="0" width="48" height="20" rx="3" fill="#18212B" /><text x="340" y="14" fill="#F3F7FA" text-anchor="middle">Figma</text>
+        <rect x="372" y="0" width="60" height="20" rx="3" fill="#18212B" /><text x="402" y="14" fill="#F3F7FA" text-anchor="middle">Git / CI</text>
+      </g>
+    </g>
+  </g>
+</svg>

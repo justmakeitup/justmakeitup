@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="abt-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B10" />
+      <stop offset="60%" stop-color="#111720" />
+      <stop offset="100%" stop-color="#080B10" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="abt-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00FFC6" />
+    </linearGradient>
+
+    <linearGradient id="abt-violet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#00E5FF" />
+    </linearGradient>
+
+    <!-- Fine Grid -->
+    <pattern id="abt-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.06" />
+    </pattern>
+
+    <style>
+      .abt-font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      }
+      .abt-font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      /* Carousel Animation: 12s total (3 slides @ 4s each) */
+      @keyframes abt-slide-1 {
+        0%, 30% { opacity: 1; transform: translateY(0); }
+        33%, 97% { opacity: 0; transform: translateY(-8px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes abt-slide-2 {
+        0%, 30% { opacity: 0; transform: translateY(8px); }
+        33%, 63% { opacity: 1; transform: translateY(0); }
+        66%, 100% { opacity: 0; transform: translateY(-8px); }
+      }
+      @keyframes abt-slide-3 {
+        0%, 63% { opacity: 0; transform: translateY(8px); }
+        66%, 97% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(8px); }
+      }
+
+      /* Progress Bars */
+      @keyframes abt-bar-1 {
+        0% { width: 0; }
+        30% { width: 110px; }
+        33%, 100% { width: 110px; opacity: 0.4; }
+      }
+      @keyframes abt-bar-2 {
+        0%, 33% { width: 0; opacity: 1; }
+        63% { width: 110px; }
+        66%, 100% { width: 110px; opacity: 0.4; }
+      }
+      @keyframes abt-bar-3 {
+        0%, 66% { width: 0; opacity: 1; }
+        97% { width: 110px; }
+        100% { width: 110px; opacity: 0.4; }
+      }
+
+      .slide-1 { animation: abt-slide-1 12s infinite; }
+      .slide-2 { animation: abt-slide-2 12s infinite; }
+      .slide-3 { animation: abt-slide-3 12s infinite; }
+
+      .bar-1 { animation: abt-bar-1 12s infinite; }
+      .bar-2 { animation: abt-bar-2 12s infinite; }
+      .bar-3 { animation: abt-bar-3 12s infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .slide-1 { opacity: 1 !important; transform: none !important; animation: none !important; }
+        .slide-2, .slide-3 { display: none; }
+        .bar-1 { width: 110px !important; animation: none !important; }
+        .bar-2, .bar-3 { width: 0 !important; animation: none !important; }
+      }
+    </style>
+  </defs>
+
+  <!-- Surface Base -->
+  <rect width="900" height="320" rx="12" fill="url(#abt-bg)" stroke="#18212B" stroke-width="1.5" />
+  <rect width="900" height="320" rx="12" fill="url(#abt-grid)" />
+
+  <!-- Section Header Row -->
+  <g transform="translate(35, 32)">
+    <text x="0" y="0" class="abt-font-mono" font-size="11" font-weight="700" fill="#00E5FF" letter-spacing="1.5">
+      // 01 ARCHITECTURE &amp; METHODOLOGY
+    </text>
+    <text x="280" y="0" class="abt-font-mono" font-size="11" fill="#9AA8B7" opacity="0.6">
+      [DISCIPLINED CRAFT // PRACTICAL EXPERIMENTATION]
+    </text>
+    <circle cx="820" cy="-4" r="3" fill="#00FFC6" />
+    <text x="810" y="0" class="abt-font-mono" font-size="10" fill="#00FFC6" text-anchor="end">SYS::VERIFIED</text>
+    <line x1="0" y1="12" x2="830" y2="12" stroke="#18212B" stroke-width="1" />
+  </g>
+
+  <!-- Left Column: Core Pillars (Schematic Cards) -->
+  <g transform="translate(35, 65)">
+    <!-- Pillar 1: Modern Web Engineering -->
+    <g transform="translate(0, 0)">
+      <rect width="400" height="66" rx="8" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="66" rx="2" fill="#00E5FF" />
+      
+      <!-- Icon Indicator -->
+      <circle cx="28" cy="33" r="14" fill="#080B10" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.4" />
+      <path d="M 23 30 L 27 33 L 23 36 M 33 30 L 29 33 L 33 36" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      
+      <text x="54" y="27" class="abt-font-sans" font-size="14" font-weight="700" fill="#F3F7FA">Web Engineering &amp; UI Architecture</text>
+      <text x="54" y="46" class="abt-font-mono" font-size="10.5" fill="#9AA8B7">
+        React 19 • TypeScript • Next.js • Responsive Performance
+      </text>
+    </g>
+
+    <!-- Pillar 2: Security & Local-First Systems -->
+    <g transform="translate(0, 78)">
+      <rect width="400" height="66" rx="8" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="66" rx="2" fill="#00FFC6" />
+      
+      <circle cx="28" cy="33" r="14" fill="#080B10" stroke="#00FFC6" stroke-width="1" stroke-opacity="0.4" />
+      <path d="M 28 25 L 34 28 L 34 33 C 34 37 28 39 28 39 C 28 39 22 37 22 33 L 22 28 Z" stroke="#00FFC6" stroke-width="1.2" fill="none" />
+      
+      <text x="54" y="27" class="abt-font-sans" font-size="14" font-weight="700" fill="#F3F7FA">Local-First &amp; Security Principles</text>
+      <text x="54" y="46" class="abt-font-mono" font-size="10.5" fill="#9AA8B7">
+        IndexedDB Storage • AES-256 Crypto • Kali &amp; Wireshark Labs
+      </text>
+    </g>
+
+    <!-- Pillar 3: AI-Assisted Workflows & Embedded IoT -->
+    <g transform="translate(0, 156)">
+      <rect width="400" height="66" rx="8" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="66" rx="2" fill="#8B5CF6" />
+      
+      <circle cx="28" cy="33" r="14" fill="#080B10" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="28" cy="33" r="4" fill="#8B5CF6" />
+      <circle cx="28" cy="33" r="8" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="2 2" />
+      
+      <text x="54" y="27" class="abt-font-sans" font-size="14" font-weight="700" fill="#F3F7FA">AI-Assisted Workflow &amp; Embedded IoT</text>
+      <text x="54" y="46" class="abt-font-mono" font-size="10.5" fill="#9AA8B7">
+        Antigravity &amp; ChatGPT • Python • Flask • Raspberry Pi
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Column: Animated Interests Carousel & Focus Terminal -->
+  <g transform="translate(465, 65)">
+    <rect width="400" height="222" rx="8" fill="#111720" stroke="#18212B" stroke-width="1" />
+    
+    <!-- Terminal Titlebar -->
+    <path d="M 0 8 Q 0 0 8 0 L 392 0 Q 400 0 400 8 L 400 30 L 0 30 Z" fill="#18212B" />
+    <circle cx="16" cy="15" r="4" fill="#FF3CAC" opacity="0.8" />
+    <circle cx="28" cy="15" r="4" fill="#00E5FF" opacity="0.8" />
+    <circle cx="40" cy="15" r="4" fill="#00FFC6" opacity="0.8" />
+    <text x="60" y="19" class="abt-font-mono" font-size="10.5" font-weight="600" fill="#F3F7FA">R&amp;D LAB // CURRENT EXPLORATIONS</text>
+
+    <!-- Carousel Progress Indicators -->
+    <g transform="translate(24, 46)">
+      <!-- Segment 1 -->
+      <rect x="0" y="0" width="110" height="3" rx="1.5" fill="#18212B" />
+      <rect x="0" y="0" width="0" height="3" rx="1.5" fill="#00E5FF" class="bar-1" />
+
+      <!-- Segment 2 -->
+      <rect x="120" y="0" width="110" height="3" rx="1.5" fill="#18212B" />
+      <rect x="120" y="0" width="0" height="3" rx="1.5" fill="#00FFC6" class="bar-2" />
+
+      <!-- Segment 3 -->
+      <rect x="240" y="0" width="110" height="3" rx="1.5" fill="#18212B" />
+      <rect x="240" y="0" width="0" height="3" rx="1.5" fill="#8B5CF6" class="bar-3" />
+    </g>
+
+    <!-- Dynamic Content Slides -->
+    <g transform="translate(24, 75)">
+      <!-- Slide 1: Frontend & Interface Design -->
+      <g class="slide-1">
+        <text x="0" y="16" class="abt-font-mono" font-size="11" fill="#00E5FF" font-weight="700">EXPLORATION 01 // INTERFACE POLISH</text>
+        <text x="0" y="42" class="abt-font-sans" font-size="16" font-weight="700" fill="#F3F7FA">
+          User Experience &amp; Responsive Fluidity
+        </text>
+        <text x="0" y="68" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          Crafting clean layouts that combine aesthetic elegance
+        </text>
+        <text x="0" y="86" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          with technical rigor. Focusing on deliberate spacing,
+        </text>
+        <text x="0" y="104" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          predictable state flows, and tactile feedback.
+        </text>
+        <text x="0" y="130" class="abt-font-mono" font-size="10" fill="#00FFC6">
+          &gt; TAGS: [Figma, React, Tailwind, Micro-Interactions]
+        </text>
+      </g>
+
+      <!-- Slide 2: Defensive Security & Privacy -->
+      <g class="slide-2">
+        <text x="0" y="16" class="abt-font-mono" font-size="11" fill="#00FFC6" font-weight="700">EXPLORATION 02 // DEFENSIVE LAB</text>
+        <text x="0" y="42" class="abt-font-sans" font-size="16" font-weight="700" fill="#F3F7FA">
+          Zero-Knowledge &amp; Local Storage
+        </text>
+        <text x="0" y="68" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          Engineering applications where user data stays strictly
+        </text>
+        <text x="0" y="86" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          on the client device. Exploring AES-GCM encryption,
+        </text>
+        <text x="0" y="104" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          network packet inspection, and ethical hacking.
+        </text>
+        <text x="0" y="130" class="abt-font-mono" font-size="10" fill="#00E5FF">
+          &gt; TAGS: [SpendWise, PBKDF2, Wireshark, Kali Linux]
+        </text>
+      </g>
+
+      <!-- Slide 3: Embedded Hardware & AI Synthesis -->
+      <g class="slide-3">
+        <text x="0" y="16" class="abt-font-mono" font-size="11" fill="#8B5CF6" font-weight="700">EXPLORATION 03 // HARDWARE &amp; AI</text>
+        <text x="0" y="42" class="abt-font-sans" font-size="16" font-weight="700" fill="#F3F7FA">
+          IoT Audio Systems &amp; Speech Synthesizers
+        </text>
+        <text x="0" y="68" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          Building physical IoT speech synthesis devices with
+        </text>
+        <text x="0" y="86" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          Raspberry Pi Zero W and Python Flask, bridging cloud
+        </text>
+        <text x="0" y="104" class="abt-font-mono" font-size="11.5" fill="#9AA8B7">
+          voice APIs with lightweight edge computing.
+        </text>
+        <text x="0" y="130" class="abt-font-mono" font-size="10" fill="#FF3CAC">
+          &gt; TAGS: [Raspberry Pi, gTTS, ElevenLabs, REST API]
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

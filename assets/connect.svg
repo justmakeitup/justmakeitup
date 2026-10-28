@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="conn-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B10" />
+      <stop offset="50%" stop-color="#111720" />
+      <stop offset="100%" stop-color="#080B10" />
+    </linearGradient>
+
+    <!-- Cyan to Teal Accent -->
+    <linearGradient id="conn-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00FFC6" />
+    </linearGradient>
+
+    <pattern id="conn-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#00E5FF" fill-opacity="0.08" />
+    </pattern>
+
+    <style>
+      .conn-font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      }
+      .conn-font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      /* Signal Packet Pulse Along Conduits */
+      @keyframes conn-packet-1 {
+        0% { stroke-dashoffset: 160; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes conn-node-glow {
+        0%, 100% { filter: drop-shadow(0 0 2px #00E5FF); }
+        50% { filter: drop-shadow(0 0 6px #00FFC6); }
+      }
+
+      .packet-flow {
+        stroke-dasharray: 8 20;
+        animation: conn-packet-1 2.5s linear infinite;
+      }
+      .node-beacon {
+        animation: conn-node-glow 3s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .packet-flow, .node-beacon {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Surface Base -->
+  <rect width="900" height="240" rx="12" fill="url(#conn-bg)" stroke="#18212B" stroke-width="1.5" />
+  <rect width="900" height="240" rx="12" fill="url(#conn-grid)" />
+
+  <!-- Section Header Row -->
+  <g transform="translate(35, 28)">
+    <text x="0" y="0" class="conn-font-mono" font-size="11" font-weight="700" fill="#00E5FF" letter-spacing="1.5">
+      // 03 COMMUNICATION &amp; NETWORK UPLINK
+    </text>
+    <text x="290" y="0" class="conn-font-mono" font-size="11" fill="#9AA8B7" opacity="0.6">
+      [SECURE TRANSMISSION CHANNELS]
+    </text>
+    <circle cx="820" cy="-4" r="3" fill="#00FFC6" class="node-beacon" />
+    <text x="810" y="0" class="conn-font-mono" font-size="10" fill="#00FFC6" text-anchor="end">SIGNAL::LISTENING</text>
+    <line x1="0" y1="12" x2="830" y2="12" stroke="#18212B" stroke-width="1" />
+  </g>
+
+  <!-- Network Conduits connecting Left Origin to Right Nodes -->
+  <g stroke="#00E5FF" stroke-width="1.2" fill="none" opacity="0.4">
+    <!-- Conduit to Node 1: GitHub -->
+    <path d="M 230 135 C 330 135, 360 75, 470 75" />
+    <!-- Conduit to Node 2: Portfolio -->
+    <path d="M 230 135 C 330 135, 360 115, 470 115" />
+    <!-- Conduit to Node 3: LinkedIn -->
+    <path d="M 230 135 C 330 135, 360 155, 470 155" />
+    <!-- Conduit to Node 4: Email -->
+    <path d="M 230 135 C 330 135, 360 195, 470 195" />
+  </g>
+
+  <!-- Animated Signal Packets -->
+  <g stroke="#00FFC6" stroke-width="2" fill="none">
+    <path d="M 230 135 C 330 135, 360 75, 470 75" class="packet-flow" />
+    <path d="M 230 135 C 330 135, 360 115, 470 115" class="packet-flow" style="animation-delay: -0.6s;" />
+    <path d="M 230 135 C 330 135, 360 155, 470 155" class="packet-flow" style="animation-delay: -1.2s;" />
+    <path d="M 230 135 C 330 135, 360 195, 470 195" class="packet-flow" style="animation-delay: -1.8s;" />
+  </g>
+
+  <!-- Left: Central Station Terminal Card -->
+  <g transform="translate(45, 65)">
+    <rect width="185" height="140" rx="8" fill="#111720" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.4" />
+    
+    <!-- Titlebar -->
+    <path d="M 0 8 Q 0 0 8 0 L 177 0 Q 185 0 185 8 L 185 24 L 0 24 Z" fill="#18212B" />
+    <circle cx="12" cy="12" r="3" fill="#00FFC6" />
+    <text x="22" y="15" class="conn-font-mono" font-size="9" font-weight="700" fill="#F3F7FA">STATION // KOLKATA</text>
+
+    <!-- Radar Sweep Motif -->
+    <circle cx="92" cy="74" r="32" fill="none" stroke="#18212B" stroke-width="1.5" />
+    <circle cx="92" cy="74" r="20" fill="none" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="2 3" />
+    <circle cx="92" cy="74" r="8" fill="#18212B" stroke="#00FFC6" stroke-width="1.2" />
+    <circle cx="92" cy="74" r="3" fill="#00FFC6" class="node-beacon" />
+
+    <text x="92" y="120" class="conn-font-mono" font-size="9.5" fill="#00E5FF" text-anchor="middle" font-weight="700">RD::UPLINK</text>
+    <text x="92" y="132" class="conn-font-mono" font-size="8" fill="#9AA8B7" text-anchor="middle">22.57° N, 88.36° E</text>
+  </g>
+
+  <!-- Right: 4 Communication Channels -->
+  <g transform="translate(470, 55)">
+    <!-- Channel 1: GitHub -->
+    <g transform="translate(0, 0)">
+      <rect width="385" height="34" rx="5" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#00E5FF" />
+      <text x="32" y="21" class="conn-font-mono" font-size="10.5" font-weight="700" fill="#F3F7FA">ENDPOINT 01 // GITHUB</text>
+      <text x="365" y="21" class="conn-font-mono" font-size="10" fill="#00E5FF" text-anchor="end">github.com/justmakeitup</text>
+    </g>
+
+    <!-- Channel 2: Portfolio -->
+    <g transform="translate(0, 40)">
+      <rect width="385" height="34" rx="5" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#00FFC6" />
+      <text x="32" y="21" class="conn-font-mono" font-size="10.5" font-weight="700" fill="#F3F7FA">ENDPOINT 02 // PORTFOLIO</text>
+      <text x="365" y="21" class="conn-font-mono" font-size="10" fill="#00FFC6" text-anchor="end">my-portfolio-nine-omega-68.vercel.app</text>
+    </g>
+
+    <!-- Channel 3: LinkedIn -->
+    <g transform="translate(0, 80)">
+      <rect width="385" height="34" rx="5" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#8B5CF6" />
+      <text x="32" y="21" class="conn-font-mono" font-size="10.5" font-weight="700" fill="#F3F7FA">ENDPOINT 03 // LINKEDIN</text>
+      <text x="365" y="21" class="conn-font-mono" font-size="10" fill="#8B5CF6" text-anchor="end">linkedin.com/in/ranit-das-787910261</text>
+    </g>
+
+    <!-- Channel 4: Email -->
+    <g transform="translate(0, 120)">
+      <rect width="385" height="34" rx="5" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <circle cx="16" cy="17" r="4" fill="#FF3CAC" />
+      <text x="32" y="21" class="conn-font-mono" font-size="10.5" font-weight="700" fill="#F3F7FA">ENDPOINT 04 // DIRECT DISPATCH</text>
+      <text x="365" y="21" class="conn-font-mono" font-size="10" fill="#FF3CAC" text-anchor="end">ranitdas1321@gmail.com</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranit Das — GitHub Profile README Preview</title>
+  <style>
+    :root {
+      --bg-canvas: #0d1117;
+      --bg-subtle: #161b22;
+      --border-default: #30363d;
+      --border-muted: #21262d;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-accent: #58a6ff;
+      --neon-cyan: #00E5FF;
+      --neon-teal: #00FFC6;
+      --neon-violet: #8B5CF6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+
+    /* Top Preview Control Bar */
+    .preview-bar {
+      max-width: 920px;
+      margin: 0 auto 24px auto;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-default);
+      border-radius: 8px;
+      padding: 12px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+    }
+
+    .preview-bar .title {
+      color: var(--neon-cyan);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .preview-bar .title::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--neon-teal);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--neon-teal);
+    }
+
+    .preview-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .preview-btn {
+      background: #21262d;
+      color: var(--text-primary);
+      border: 1px solid var(--border-default);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 11px;
+      transition: all 0.2s ease;
+    }
+
+    .preview-btn:hover {
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+    }
+
+    /* Main Container (Simulating GitHub Profile README) */
+    .readme-wrapper {
+      max-width: 896px;
+      margin: 0 auto;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-default);
+      border-radius: 8px;
+      padding: 36px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 640px) {
+      .readme-wrapper {
+        padding: 20px 16px;
+      }
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      color: var(--neon-cyan);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #c9d1d9;
+    }
+
+    a {
+      color: var(--neon-cyan);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--neon-teal);
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-muted);
+      margin: 28px 0;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+      background: rgba(110, 118, 129, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #79c0ff;
+    }
+
+    pre {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-default);
+      border-radius: 6px;
+      padding: 16px;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      color: #e6edf3;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--neon-cyan);
+      padding: 8px 16px;
+      color: var(--text-secondary);
+      background: rgba(0, 229, 255, 0.03);
+      margin-bottom: 16px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* GitHub Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      display: table;
+    }
+
+    table th, table td {
+      border: 1px solid var(--border-default);
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    table th {
+      background: var(--bg-subtle);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    table tr:nth-child(2n) {
+      background: rgba(22, 27, 34, 0.5);
+    }
+
+    /* Embedded SVG & Portrait */
+    .readme-wrapper img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-table td {
+      border: none !important;
+      padding: 12px 8px;
+    }
+
+    .hero-portrait {
+      border-radius: 12px;
+      border: 1px solid var(--neon-cyan);
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-portrait:hover {
+      transform: scale(1.02);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preview Toolbar -->
+  <div class="preview-bar">
+    <div class="title">
+      RANIT DAS // NEON-IDENTITY GITHUB README PREVIEW
+    </div>
+    <div class="preview-actions">
+      <button class="preview-btn" onclick="toggleWidth('desktop')">Desktop (896px)</button>
+      <button class="preview-btn" onclick="toggleWidth('mobile')">Mobile (420px)</button>
+      <button class="preview-btn" onclick="toggleOutline()">Toggle Grids</button>
+    </div>
+  </div>
+
+  <!-- README Document Container -->
+  <main class="readme-wrapper" id="readmeContainer">
+    
+    <!-- Hero Header SVG -->
+    <div class="text-center" style="margin-bottom: 24px;">
+      <a href="https://github.com/justmakeitup" target="_blank" rel="noopener">
+        <img src="../assets/hero.svg?v=1" alt="Ranit Das Hero Banner" width="896" />
+      </a>
+    </div>
+
+    <hr />
+
+    <!-- Section A: Operator Profile & Single Authentic Portrait -->
+    <h3>◈ OPERATOR PROFILE &amp; IDENTITY</h3>
+
+    <table class="hero-table" style="width: 100%; margin: 16px 0;">
+      <tr>
+        <td style="width: 68%; vertical-align: top;">
+          <h2 style="margin-top: 0; font-size: 18px; color: #fff;">
+            Building thoughtful digital experiences. Exploring technology through practical projects.
+          </h2>
+          <p>
+            I am a <strong>Web Developer</strong> based in Kolkata, India, focused on responsive interfaces, modern UI/UX design, AI-assisted development workflows, and cybersecurity fundamentals.
+          </p>
+          <p>
+            I specialize in turning practical ideas into usable digital tools—from client-side privacy-first web apps to embedded hardware prototypes. My workflow pairs disciplined engineering with modern AI development tools like <strong>Antigravity</strong> and <strong>ChatGPT</strong> to accelerate prototyping and solve complex architectural challenges cleanly.
+          </p>
+          <p style="margin-top: 14px;">
+            <a href="https://my-portfolio-nine-omega-68.vercel.app/" target="_blank" rel="noopener"><strong>Explore Live Portfolio ↗</strong></a> &nbsp;|&nbsp; 
+            <a href="https://github.com/justmakeitup" target="_blank" rel="noopener"><strong>GitHub Repositories ↗</strong></a> &nbsp;|&nbsp; 
+            <a href="https://linkedin.com/in/ranit-das-787910261" target="_blank" rel="noopener"><strong>LinkedIn Profile ↗</strong></a>
+          </p>
+        </td>
+        <td style="width: 32%; text-align: center; vertical-align: middle;">
+          <img class="hero-portrait" src="../assets/id.png?v=1" alt="Ranit Das — Head and Shoulders Professional Portrait" width="220" style="margin: 0 auto 8px auto;" />
+          <div style="font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; color: var(--text-secondary);">
+            <code>RD-OPERATOR // KOLKATA, IN</code>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <!-- Section B: About & Methodology -->
+    <h3>◈ ARCHITECTURE &amp; METHODOLOGY</h3>
+    
+    <div style="margin: 16px 0;">
+      <img src="../assets/about-life.svg?v=1" alt="Architecture and Methodology Schematic" width="896" />
+    </div>
+
+    <h4 style="color: var(--neon-teal); font-size: 14px; margin-top: 18px;">Core Development Philosophy</h4>
+    <ul style="padding-left: 20px; color: #c9d1d9; margin-bottom: 16px;">
+      <li style="margin-bottom: 6px;"><strong>User-Centric Interface Polish:</strong> Designing interfaces with deliberate whitespace, typography hierarchy, predictable state transitions, and accessible interactions.</li>
+      <li style="margin-bottom: 6px;"><strong>Privacy &amp; Local-First Architecture:</strong> Prioritizing client-side compute and storage (IndexedDB, Web Crypto API) so user data remains in user control.</li>
+      <li style="margin-bottom: 6px;"><strong>Practical Systems Learning:</strong> Understanding lower-level computer mechanics—from packet sniffing with Wireshark and Linux environments to IoT firmware with Raspberry Pi.</li>
+      <li style="margin-bottom: 6px;"><strong>AI-Augmented Engineering:</strong> Utilizing AI assistance transparently as a development accelerator for scaffolding, refactoring, and debugging while maintaining strict architectural ownership.</li>
+    </ul>
+
+    <hr />
+
+    <!-- Section C: Verified Technical Stack -->
+    <h3>◈ VERIFIED TECHNICAL MATRIX</h3>
+
+    <div style="margin: 16px 0;">
+      <img src="../assets/stack.svg?v=1" alt="Verified Technology Stack Orbital Matrix" width="896" />
+    </div>
+
+    <pre>┌─────────────────────────┬────────────────────────────────────────────────────────┐
+│ DOMAIN                  │ TECHNOLOGIES &amp; TOOLS                                   │
+├─────────────────────────┼────────────────────────────────────────────────────────┤
+│ Active Web Development  │ React 19, TypeScript, Next.js, Vite, Tailwind CSS, CSS3│
+│ Backend &amp; Data Storage  │ Python, Flask, PostgreSQL (Neon), MySQL, IndexedDB     │
+│ Security &amp; Diagnostics  │ Kali Linux, Wireshark, AES-GCM 256-bit, Network Sec    │
+│ Hardware &amp; Prototyping  │ Raspberry Pi Zero W, Antigravity AI, ChatGPT, Figma    │
+│ Version Control &amp; CI    │ Git, GitHub, Vercel                                    │
+└─────────────────────────┴────────────────────────────────────────────────────────┘</pre>
+
+    <blockquote>
+      <strong>Note on Proficiency:</strong> I represent my skills honestly based on projects I have actively built and tested. Technologies listed under Security &amp; Diagnostics represent hands-on lab experimentation and educational practice.
+    </blockquote>
+
+    <hr />
+
+    <!-- Section D: Featured Practical Projects -->
+    <h3>◈ FEATURED PRACTICAL PROJECTS</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 28%;">Project</th>
+          <th style="width: 48%;">Description &amp; Architecture</th>
+          <th style="width: 24%;">Stack &amp; Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>SpendWise</strong><br />
+            <small style="color: var(--text-secondary);">Private Personal Expense Tracker</small>
+          </td>
+          <td>
+            A privacy-first personal finance platform built with a <strong>zero-knowledge architecture</strong>. Financial transactions never touch external databases—all expense logs live inside browser <code>IndexedDB</code> and can be backed up to personal Google Drive with client-side <code>AES-GCM-256</code> encryption.
+          </td>
+          <td>
+            <code>React</code> <code>Next.js</code> <code>TypeScript</code> <code>Neon Postgres</code> <code>IndexedDB</code><br /><br />
+            <a href="https://github.com/justmakeitup/spendwise" target="_blank" rel="noopener"><strong>View Repository ↗</strong></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>DevPocket</strong><br />
+            <small style="color: var(--text-secondary);">Offline Developer Utilities Suite</small>
+          </td>
+          <td>
+            A high-performance developer toolkit featuring 8 browser utilities (JSON formatter &amp; syntax validator, Base64 encoder/decoder, URL parser, hash utilities). Executes <strong>100% of calculations in-browser</strong> with zero telemetry or data leaks.
+          </td>
+          <td>
+            <code>Next.js 14</code> <code>React</code> <code>TypeScript</code> <code>Tailwind CSS</code><br /><br />
+            <a href="https://github.com/justmakeitup/DevPocket" target="_blank" rel="noopener"><strong>View Repository ↗</strong></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>AI Text-to-Speech System</strong><br />
+            <small style="color: var(--text-secondary);">IoT Edge Synthesizer</small>
+          </td>
+          <td>
+            An embedded hardware audio synthesizer built on a <strong>Raspberry Pi Zero W</strong>. Receives incoming text via a Python Flask REST API, executes translation and text-processing pipelines, and synthesizes audio output via Google Text-to-Speech and ElevenLabs integrations.
+          </td>
+          <td>
+            <code>Python</code> <code>Flask</code> <code>Raspberry Pi</code> <code>gTTS</code> <code>REST API</code><br /><br />
+            <em style="color: var(--text-secondary); font-size: 12px;">Physical Lab Prototype</em>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Differential</strong><br />
+            <small style="color: var(--text-secondary);">Sovereign P2P Network Concept</small>
+          </td>
+          <td>
+            A minimalist, privacy-focused communication concept designed for peer-to-peer dialogue. Features a dark obsidian interface, client-side encryption primitives, and strict prohibition of surveillance algorithms.
+          </td>
+          <td>
+            <code>React</code> <code>Next.js</code> <code>TypeScript</code> <code>Tailwind CSS</code><br /><br />
+            <a href="https://github.com/justmakeitup/differential-chat" target="_blank" rel="noopener"><strong>View Repository ↗</strong></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Personal Portfolio</strong><br />
+            <small style="color: var(--text-secondary);">Interactive Creative Showcase</small>
+          </td>
+          <td>
+            Personal portfolio demonstrating component architecture, fluid typography, dark aesthetic lighting, and interactive project galleries.
+          </td>
+          <td>
+            <code>React</code> <code>TypeScript</code> <code>Vite</code> <code>Tailwind CSS</code><br /><br />
+            <a href="https://my-portfolio-nine-omega-68.vercel.app/" target="_blank" rel="noopener"><strong>Live Demo ↗</strong></a> &nbsp;|&nbsp; 
+            <a href="https://github.com/justmakeitup/my-portfolio" target="_blank" rel="noopener"><strong>Repository ↗</strong></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <!-- Section F: Credential Dashboard -->
+    <h3>◈ CREDENTIAL TELEMETRY &amp; BADGE</h3>
+
+    <div style="margin: 16px 0;">
+      <img src="../assets/id-dashboard.svg?v=1" alt="Hanging ID Card Dashboard" width="896" />
+    </div>
+
+    <pre>STATUS: ACTIVE OPERATOR // LOCATION: KOLKATA, INDIA (IST UTC+5:30)
+ACADEMIC: B.TECH IN ELECTRONICS &amp; COMMUNICATION ENGINEERING (RCCIIT / MAKAUT)
+FOCUS AREAS: RESPONSIVE INTERFACES • LOCAL STORAGE PRIVACY • EMBEDDED IOT • AI PROTOTYPING</pre>
+
+    <hr />
+
+    <!-- Section G: Secure Uplink & Contacts -->
+    <h3>◈ SECURE COMMUNICATIONS UPLINK</h3>
+
+    <div style="margin: 16px 0;">
+      <img src="../assets/connect.svg?v=1" alt="Secure Communications Uplink Graphic" width="896" />
+    </div>
+
+    <table style="width: 100%; margin: 18px 0;">
+      <thead>
+        <tr>
+          <th style="width: 30%;">Platform</th>
+          <th style="width: 30%;">Channel</th>
+          <th style="width: 40%;">Verified Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Portfolio Website</strong></td>
+          <td>Live Deployment</td>
+          <td><a href="https://my-portfolio-nine-omega-68.vercel.app/" target="_blank" rel="noopener">my-portfolio-nine-omega-68.vercel.app ↗</a></td>
+        </tr>
+        <tr>
+          <td><strong>GitHub</strong></td>
+          <td><code>@justmakeitup</code></td>
+          <td><a href="https://github.com/justmakeitup" target="_blank" rel="noopener">github.com/justmakeitup ↗</a></td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn</strong></td>
+          <td><code>in/ranit-das-787910261</code></td>
+          <td><a href="https://linkedin.com/in/ranit-das-787910261" target="_blank" rel="noopener">linkedin.com/in/ranit-das-787910261 ↗</a></td>
+        </tr>
+        <tr>
+          <td><strong>Direct Dispatch</strong></td>
+          <td>Email Inquiries</td>
+          <td><a href="mailto:ranitdas1321@gmail.com">ranitdas1321@gmail.com ↗</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <!-- Section H: Footer -->
+    <div class="text-center" style="margin: 32px 0 16px 0; color: var(--text-secondary); font-size: 12px;">
+      <p style="margin-bottom: 4px;">Designed with intention. Built with code. Continuously exploring.</p>
+      <code>© 2026 RANIT DAS // NEON::IDENTITY SYSTEM</code>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWidth(mode) {
+      const container = document.getElementById('readmeContainer');
+      if (mode === 'mobile') {
+        container.style.maxWidth = '420px';
+      } else {
+        container.style.maxWidth = '896px';
+      }
+    }
+
+    function toggleOutline() {
+      const container = document.getElementById('readmeContainer');
+      if (container.style.outline) {
+        container.style.outline = '';
+      } else {
+        container.style.outline = '2px dashed #00E5FF';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B10" />
+      <stop offset="50%" stop-color="#111720" />
+      <stop offset="100%" stop-color="#080B10" />
+    </linearGradient>
+
+    <!-- Cyan to Teal Accent Gradient -->
+    <linearGradient id="hero-cyan-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#00FFC6" />
+    </linearGradient>
+
+    <!-- Ultraviolet Glow Gradient -->
+    <linearGradient id="hero-violet-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Technical Grid Pattern -->
+    <pattern id="hero-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.08" />
+      <circle cx="30" cy="0" r="1" fill="#00E5FF" fill-opacity="0.15" />
+    </pattern>
+
+    <!-- Dot Matrix Pattern -->
+    <pattern id="hero-dots" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#9AA8B7" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Glow Filter for Cyber Accents -->
+    <filter id="hero-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @keyframes hero-pulse {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(0.92); }
+      }
+      @keyframes hero-scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(280px); }
+      }
+      @keyframes hero-cycle-1 {
+        0%, 22% { opacity: 1; transform: translateY(0); }
+        25%, 100% { opacity: 0; transform: translateY(-10px); }
+      }
+      @keyframes hero-cycle-2 {
+        0%, 25% { opacity: 0; transform: translateY(10px); }
+        28%, 47% { opacity: 1; transform: translateY(0); }
+        50%, 100% { opacity: 0; transform: translateY(-10px); }
+      }
+      @keyframes hero-cycle-3 {
+        0%, 50% { opacity: 0; transform: translateY(10px); }
+        53%, 72% { opacity: 1; transform: translateY(0); }
+        75%, 100% { opacity: 0; transform: translateY(-10px); }
+      }
+      @keyframes hero-cycle-4 {
+        0%, 75% { opacity: 0; transform: translateY(10px); }
+        78%, 97% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-10px); }
+      }
+      @keyframes hero-beam {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .hero-font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+      }
+      .hero-font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, 'Helvetica Neue', sans-serif;
+      }
+      .anim-pulse { animation: hero-pulse 2.5s ease-in-out infinite; }
+      .anim-c1 { animation: hero-cycle-1 12s infinite; }
+      .anim-c2 { animation: hero-cycle-2 12s infinite; }
+      .anim-c3 { animation: hero-cycle-3 12s infinite; }
+      .anim-c4 { animation: hero-cycle-4 12s infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .anim-pulse, .anim-c1, .anim-c2, .anim-c3, .anim-c4 {
+          animation: none !important;
+        }
+        .anim-c1 { opacity: 1 !important; transform: none !important; }
+        .anim-c2, .anim-c3, .anim-c4 { display: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Surface -->
+  <rect width="900" height="280" rx="12" fill="url(#hero-bg)" stroke="#18212B" stroke-width="1.5" />
+  
+  <!-- Subtle Grid and Dot Texture -->
+  <rect width="900" height="280" rx="12" fill="url(#hero-grid)" />
+  <rect x="480" y="20" width="390" height="180" fill="url(#hero-dots)" opacity="0.6" />
+
+  <!-- Soft Ambient Glow (Teal & Violet) -->
+  <circle cx="150" cy="80" r="120" fill="url(#hero-violet-glow)" />
+  <circle cx="800" cy="220" r="140" fill="#00E5FF" fill-opacity="0.03" />
+
+  <!-- HUD Decorative Outer Hairline & Corner Brackets -->
+  <g stroke="#00E5FF" stroke-width="1.5" fill="none">
+    <!-- Top-Left Bracket -->
+    <path d="M 24 38 L 24 24 L 38 24" />
+    <!-- Top-Right Bracket -->
+    <path d="M 876 38 L 876 24 L 862 24" />
+    <!-- Bottom-Left Bracket -->
+    <path d="M 24 242 L 24 256 L 38 256" />
+    <!-- Bottom-Right Bracket -->
+    <path d="M 876 242 L 876 256 L 862 256" />
+  </g>
+
+  <!-- Technical Header Row -->
+  <g class="hero-font-mono" font-size="11" letter-spacing="1.5">
+    <text x="45" y="38" fill="#00E5FF" font-weight="600">// NEON::IDENTITY SYSTEM</text>
+    <text x="235" y="38" fill="#9AA8B7" opacity="0.7">[SYS_REV: 2026.4B]</text>
+    
+    <!-- Status Pill -->
+    <g transform="translate(680, 26)">
+      <rect width="180" height="20" rx="4" fill="#18212B" stroke="#00FFC6" stroke-width="0.75" stroke-opacity="0.4" />
+      <circle cx="14" cy="10" r="4" fill="#00FFC6" class="anim-pulse" />
+      <text x="26" y="14" fill="#00FFC6" font-size="10" font-weight="700" letter-spacing="1">STATUS: ONLINE</text>
+    </g>
+  </g>
+
+  <!-- Subtle Horizontal Divider -->
+  <line x1="45" y1="52" x2="855" y2="52" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.18" />
+
+  <!-- Main Identity Presentation -->
+  <g transform="translate(45, 75)">
+    <!-- Terminal Prompt Eyebrow -->
+    <text x="0" y="20" class="hero-font-mono" font-size="13" font-weight="500" fill="#9AA8B7" letter-spacing="1">
+      <tspan fill="#00E5FF">const</tspan> developer = <tspan fill="#00FFC6">"Ranit Das"</tspan>;
+    </text>
+
+    <!-- Big Cyber Display Name -->
+    <text x="0" y="65" class="hero-font-sans" font-size="44" font-weight="800" fill="#F3F7FA" letter-spacing="-0.5">
+      RANIT DAS
+    </text>
+
+    <!-- Accent Underline Beam -->
+    <rect x="0" y="77" width="220" height="3" rx="1.5" fill="url(#hero-cyan-teal)" filter="url(#hero-glow)" />
+    <rect x="230" y="78" width="8" height="2" fill="#8B5CF6" />
+    <rect x="242" y="78" width="4" height="2" fill="#00E5FF" opacity="0.6" />
+
+    <!-- Core Positioning Subtitle -->
+    <text x="0" y="105" class="hero-font-mono" font-size="13" font-weight="600" fill="#00E5FF" letter-spacing="1">
+      WEB DEVELOPER <tspan fill="#8B5CF6">|</tspan> UI/UX DESIGN <tspan fill="#8B5CF6">|</tspan> CYBERSECURITY ENTHUSIAST
+    </text>
+
+    <!-- Animated Cycling Terminal Line -->
+    <g transform="translate(0, 130)" class="hero-font-mono" font-size="12">
+      <rect x="0" y="-12" width="540" height="24" rx="4" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <text x="12" y="4" fill="#00FFC6" font-weight="700">&gt;</text>
+      
+      <!-- Slide 1 -->
+      <g class="anim-c1">
+        <text x="28" y="4" fill="#F3F7FA">FOCUS // Building thoughtful digital experiences &amp; clean web apps</text>
+      </g>
+      <!-- Slide 2 -->
+      <g class="anim-c2">
+        <text x="28" y="4" fill="#F3F7FA">SECURITY // Investigating local-first privacy &amp; secure protocols</text>
+      </g>
+      <!-- Slide 3 -->
+      <g class="anim-c3">
+        <text x="28" y="4" fill="#F3F7FA">HARDWARE // Prototyping IoT audio with Raspberry Pi &amp; Python</text>
+      </g>
+      <!-- Slide 4 -->
+      <g class="anim-c4">
+        <text x="28" y="4" fill="#F3F7FA">METHOD // AI-assisted development, rapid prototyping &amp; iteration</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Decorative Telemetry Box -->
+  <g transform="translate(630, 75)">
+    <rect width="225" height="140" rx="8" fill="#111720" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.25" />
+    
+    <!-- Telemetry Header -->
+    <path d="M 0 8 Q 0 0 8 0 L 217 0 Q 225 0 225 8 L 225 24 L 0 24 Z" fill="#18212B" />
+    <text x="12" y="16" class="hero-font-mono" font-size="9.5" font-weight="700" fill="#9AA8B7" letter-spacing="1">TELEMETRY // COORDINATES</text>
+    <circle cx="210" cy="12" r="3" fill="#00E5FF" opacity="0.7" />
+
+    <!-- Metadata Items -->
+    <g class="hero-font-mono" font-size="10.5" transform="translate(14, 44)">
+      <text x="0" y="0" fill="#9AA8B7">LOCATION:</text>
+      <text x="75" y="0" fill="#F3F7FA" font-weight="600">Kolkata, IN</text>
+
+      <text x="0" y="22" fill="#9AA8B7">COORDS:</text>
+      <text x="75" y="22" fill="#00E5FF" font-weight="500">22.57°N 88.36°E</text>
+
+      <text x="0" y="44" fill="#9AA8B7">PORTFOLIO:</text>
+      <text x="75" y="44" fill="#00FFC6" font-weight="500">Verified Live</text>
+
+      <text x="0" y="66" fill="#9AA8B7">EXPERIENCE:</text>
+      <text x="75" y="66" fill="#F3F7FA" font-weight="600">2+ Yrs Practical</text>
+    </g>
+
+    <!-- Mini Bottom Status Graph -->
+    <g transform="translate(14, 122)">
+      <rect x="0" y="0" width="197" height="4" rx="2" fill="#18212B" />
+      <rect x="0" y="0" width="138" height="4" rx="2" fill="url(#hero-cyan-teal)" />
+    </g>
+  </g>
+
+  <!-- Bottom Technical Badges Row -->
+  <g transform="translate(45, 235)" class="hero-font-mono" font-size="10.5">
+    <g transform="translate(0, 0)">
+      <rect width="90" height="20" rx="4" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <text x="45" y="14" fill="#9AA8B7" text-anchor="middle">REACT 19</text>
+    </g>
+    <g transform="translate(100, 0)">
+      <rect width="105" height="20" rx="4" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <text x="52" y="14" fill="#9AA8B7" text-anchor="middle">TYPESCRIPT</text>
+    </g>
+    <g transform="translate(215, 0)">
+      <rect width="80" height="20" rx="4" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <text x="40" y="14" fill="#9AA8B7" text-anchor="middle">NEXT.JS</text>
+    </g>
+    <g transform="translate(305, 0)">
+      <rect width="80" height="20" rx="4" fill="#111720" stroke="#18212B" stroke-width="1" />
+      <text x="40" y="14" fill="#9AA8B7" text-anchor="middle">PYTHON</text>
+    </g>
+    <g transform="translate(395, 0)">
+      <rect width="130" height="20" rx="4" fill="#111720" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.3" />
+      <text x="65" y="14" fill="#00E5FF" text-anchor="middle">CYBERSECURITY</text>
+    </g>
+
+    <!-- Subtle ID Signature -->
+    <text x="810" y="14" fill="#9AA8B7" opacity="0.4" font-size="9.5" text-anchor="end">ID::RD-787910261</text>
+  </g>
+</svg>

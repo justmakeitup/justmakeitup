@@ -26,7 +26,7 @@ Design and generate a complete, distinctive, professional cyberpunk GitHub profi
 ## Critical Identity & Portrait Constraints
 1. **Exactly ONE authentic portrait:** `assets/id.png` (authentic head-and-shoulders portrait of Ranit Das cropped to the collar, professional shirt/jacket with subtle cyber rim lighting).
 2. **Zero duplicate faces or character illustrations:** No anime, no avatars, no pointing character (`right_pointing.png` eliminated), no secondary portraits across any section or inside any SVGs.
-3. **Factual Integrity:** Represent all skills, projects, and technologies with 100% honesty. Explicitly document AI-assisted development workflows (Antigravity, ChatGPT). No fabricated metrics, awards, or fake star counts.
+3. **Factual Integrity:** Represent all skills, projects, and technologies with 100% honesty. Focus strictly on verified engineering craft and practical prototyping. No fabricated metrics, awards, or fake star counts.
 
 ---
 

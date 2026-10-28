@@ -130,7 +130,7 @@
       </text>
     </g>
 
-    <!-- Pillar 3: AI-Assisted Workflows & Embedded IoT -->
+    <!-- Pillar 3: Embedded IoT & Rapid Prototyping -->
     <g transform="translate(0, 156)">
       <rect width="400" height="66" rx="8" fill="#111720" stroke="#18212B" stroke-width="1" />
       <rect x="0" y="0" width="4" height="66" rx="2" fill="#8B5CF6" />
@@ -139,9 +139,9 @@
       <circle cx="28" cy="33" r="4" fill="#8B5CF6" />
       <circle cx="28" cy="33" r="8" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="2 2" />
       
-      <text x="54" y="27" class="abt-font-sans" font-size="14" font-weight="700" fill="#F3F7FA">AI-Assisted Workflow &amp; Embedded IoT</text>
+      <text x="54" y="27" class="abt-font-sans" font-size="14" font-weight="700" fill="#F3F7FA">Rapid Prototyping &amp; Embedded IoT</text>
       <text x="54" y="46" class="abt-font-mono" font-size="10.5" fill="#9AA8B7">
-        Antigravity &amp; ChatGPT • Python • Flask • Raspberry Pi
+        Linux • Python • Flask • Raspberry Pi • REST API
       </text>
     </g>
   </g>

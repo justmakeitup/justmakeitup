@@ -2,7 +2,7 @@
 
 # NEON // IDENTITY — RANIT DAS
 
-[![Intro](./assets/hero.svg?v=1)](https://github.com/justmakeitup)
+[![Intro](./assets/hero.svg?v=2)](https://github.com/justmakeitup)
 
 </div>
 
@@ -15,10 +15,10 @@
     <td width="68%" valign="top">
       <h3>Building thoughtful digital experiences. Exploring technology through practical projects.</h3>
       <p>
-        I am a <strong>Web Developer</strong> based in Kolkata, India, focused on responsive interfaces, modern UI/UX design, AI-assisted development workflows, and cybersecurity fundamentals.
+        I am a <strong>Web Developer</strong> based in Kolkata, India, focused on responsive interfaces, modern UI/UX design, modular component architecture, and cybersecurity fundamentals.
       </p>
       <p>
-        I specialize in turning practical ideas into usable digital tools—from client-side privacy-first web apps to embedded hardware prototypes. My workflow pairs disciplined engineering with modern AI development tools like <strong>Antigravity</strong> and <strong>ChatGPT</strong> to accelerate prototyping and solve complex architectural challenges cleanly.
+        I specialize in turning practical ideas into usable digital tools—from client-side privacy-first web applications to embedded hardware prototypes. My workflow emphasizes clean component hierarchy, rapid iterative prototyping, and building performant, accessible digital products.
       </p>
       <p>
         <a href="https://my-portfolio-nine-omega-68.vercel.app/"><strong>Explore Live Portfolio ↗</strong></a> &nbsp;|&nbsp; 
@@ -36,21 +36,21 @@
 
 ---
 
-### ◈ ARCHITECTURE &amp; METHODOLOGY
+### ◈ ARCHITECTURE &amp; ENGINEERING CRAFT
 
-[![About](./assets/about-life.svg?v=1)](https://github.com/justmakeitup)
+[![About](./assets/about-life.svg?v=2)](https://github.com/justmakeitup)
 
 #### Core Development Philosophy
 - **User-Centric Interface Polish:** Designing interfaces with deliberate whitespace, typography hierarchy, predictable state transitions, and accessible interactions.
 - **Privacy &amp; Local-First Architecture:** Prioritizing client-side compute and storage (IndexedDB, Web Crypto API) so user data remains in user control.
 - **Practical Systems Learning:** Understanding lower-level computer mechanics—from packet sniffing with Wireshark and Linux environments to IoT firmware with Raspberry Pi.
-- **AI-Augmented Engineering:** Utilizing AI assistance transparently as a development accelerator for scaffolding, refactoring, and debugging while maintaining strict architectural ownership.
+- **Rapid Iterative Prototyping:** Transforming concepts into functional, interactive platforms quickly through modular design systems and disciplined engineering craft.
 
 ---
 
 ### ◈ VERIFIED TECHNICAL MATRIX
 
-[![Stack](./assets/stack.svg?v=1)](https://github.com/justmakeitup)
+[![Stack](./assets/stack.svg?v=2)](https://github.com/justmakeitup)
 
 ```text
 ┌─────────────────────────┬────────────────────────────────────────────────────────┐
@@ -59,7 +59,7 @@
 │ Active Web Development  │ React 19, TypeScript, Next.js, Vite, Tailwind CSS, CSS3│
 │ Backend & Data Storage  │ Python, Flask, PostgreSQL (Neon), MySQL, IndexedDB     │
 │ Security & Diagnostics  │ Kali Linux, Wireshark, AES-GCM 256-bit, Network Sec    │
-│ Hardware & Prototyping  │ Raspberry Pi Zero W, Antigravity AI, ChatGPT, Figma    │
+│ Hardware & Prototyping  │ Raspberry Pi Zero W, Linux, Postman, Figma             │
 │ Version Control & CI    │ Git, GitHub, Vercel                                    │
 └─────────────────────────┴────────────────────────────────────────────────────────┘
 ```
@@ -152,19 +152,19 @@
 
 ### ◈ CREDENTIAL TELEMETRY &amp; BADGE
 
-[![ID Dashboard](./assets/id-dashboard.svg?v=1)](https://github.com/justmakeitup)
+[![ID Dashboard](./assets/id-dashboard.svg?v=2)](https://github.com/justmakeitup)
 
 ```text
 STATUS: ACTIVE OPERATOR // LOCATION: KOLKATA, INDIA (IST UTC+5:30)
 ACADEMIC: B.TECH IN ELECTRONICS & COMMUNICATION ENGINEERING (RCCIIT / MAKAUT)
-FOCUS AREAS: RESPONSIVE INTERFACES • LOCAL STORAGE PRIVACY • EMBEDDED IOT • AI PROTOTYPING
+FOCUS AREAS: RESPONSIVE INTERFACES • LOCAL STORAGE PRIVACY • EMBEDDED IOT • UI/UX DESIGN
 ```
 
 ---
 
 ### ◈ SECURE COMMUNICATIONS UPLINK
 
-[![Connect](./assets/connect.svg?v=1)](https://github.com/justmakeitup)
+[![Connect](./assets/connect.svg?v=2)](https://github.com/justmakeitup)
 
 <div align="center">
 

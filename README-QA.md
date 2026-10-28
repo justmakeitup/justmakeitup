@@ -26,7 +26,7 @@
 | :--- | :--- | :--- | :---: | :--- |
 | **FACT-01** | Accurate Personal Identity | Checked Name, Username, Portfolio, Location | **PASS** | Ranit Das, Kolkata, WB, India; `justmakeitup`. |
 | **FACT-02** | Honest Positioning | Checked seniority and title claims | **PASS** | Positioned accurately as Web Developer \| UI/UX Design \| Cybersecurity Enthusiast. No claims of senior engineer or cybersecurity expert. |
-| **FACT-03** | AI-Assisted Development Representation | Checked disclosure of development methodology | **PASS** | Transparently credits Antigravity and ChatGPT for prototyping and acceleration. |
+| **FACT-03** | Engineering Craft Representation | Verified focus on modular component architecture and practical prototyping | **PASS** | Focuses purely on software architecture and design craft without external tool dependencies. |
 | **FACT-04** | Project Verification: SpendWise | Checked local repository remotes and architecture | **PASS** | Verified repo `https://github.com/justmakeitup/spendwise`, IndexedDB local-first storage, AES-GCM 256-bit encryption. |
 | **FACT-05** | Project Verification: DevPocket | Checked local repository remotes and architecture | **PASS** | Verified repo `https://github.com/justmakeitup/DevPocket`, Next.js 14, 8 client-side browser utilities. |
 | **FACT-06** | Project Verification: AI Text-to-Speech | Checked portfolio data and hardware prototype specs | **PASS** | Raspberry Pi Zero W, Flask REST API, gTTS/ElevenLabs audio synthesis. |

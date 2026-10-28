@@ -205,15 +205,15 @@
       <rect width="445" height="58" rx="6" fill="#111720" stroke="#18212B" stroke-width="1" />
       <rect x="0" y="0" width="3" height="58" rx="1.5" fill="#FF3CAC" />
       <text x="14" y="20" class="stk-font-mono" font-size="10" font-weight="700" fill="#FF3CAC" letter-spacing="1">
-        CATEGORY 04 // HARDWARE &amp; AI-ASSISTED PROTOTYPING
+        CATEGORY 04 // HARDWARE &amp; EMBEDDED PROTOTYPING
       </text>
       <!-- Chips -->
       <g transform="translate(14, 28)" class="stk-font-mono" font-size="10">
         <rect x="0" y="0" width="130" height="20" rx="3" fill="#18212B" /><text x="65" y="14" fill="#F3F7FA" text-anchor="middle">Raspberry Pi Zero W</text>
-        <rect x="138" y="0" width="94" height="20" rx="3" fill="#18212B" /><text x="185" y="14" fill="#F3F7FA" text-anchor="middle">Antigravity AI</text>
-        <rect x="240" y="0" width="68" height="20" rx="3" fill="#18212B" /><text x="274" y="14" fill="#F3F7FA" text-anchor="middle">ChatGPT</text>
-        <rect x="316" y="0" width="48" height="20" rx="3" fill="#18212B" /><text x="340" y="14" fill="#F3F7FA" text-anchor="middle">Figma</text>
-        <rect x="372" y="0" width="60" height="20" rx="3" fill="#18212B" /><text x="402" y="14" fill="#F3F7FA" text-anchor="middle">Git / CI</text>
+        <rect x="138" y="0" width="80" height="20" rx="3" fill="#18212B" /><text x="178" y="14" fill="#F3F7FA" text-anchor="middle">Linux / CLI</text>
+        <rect x="226" y="0" width="70" height="20" rx="3" fill="#18212B" /><text x="261" y="14" fill="#F3F7FA" text-anchor="middle">Postman</text>
+        <rect x="304" y="0" width="56" height="20" rx="3" fill="#18212B" /><text x="332" y="14" fill="#F3F7FA" text-anchor="middle">Figma</text>
+        <rect x="368" y="0" width="60" height="20" rx="3" fill="#18212B" /><text x="398" y="14" fill="#F3F7FA" text-anchor="middle">Git / CI</text>
       </g>
     </g>
   </g>
